@@ -12,15 +12,23 @@ const Footer = () => {
               </li>
           )
         })}
-     
       </ul>
       <ul className="footer-icons">
-        <li>
-          <a href="https://www.twitter.com" target="_blank" className="footer-icon"
-            ><i className="fab fa-facebook"></i
-          ></a>
-        </li>
-        <li>
+        {socialLinks.map((link) => {
+          const {id, href, icon} = link
+          return (
+            <li>
+              <a href={href} 
+                 target="_blank" 
+                 className="footer-icon"
+              >
+                 <i className={icon}></i>
+              </a>
+            </li>
+          )
+        })}
+        
+        {/* <li>
           <a href="https://www.twitter.com" target="_blank" className="footer-icon"
             ><i className="fab fa-twitter"></i
           ></a>
@@ -29,7 +37,7 @@ const Footer = () => {
           <a href="https://www.twitter.com" target="_blank" className="footer-icon"
             ><i className="fab fa-squarespace"></i
           ></a>
-        </li>
+        </li> */}
       </ul>
       <p className="copyright">
         copyright &copy; Backroads travel tours company
