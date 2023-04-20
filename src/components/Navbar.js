@@ -12,8 +12,8 @@ const Navbar = () => {
             <i className="fas fa-bars"></i>
           </button>
         </div>
-        
-        <PageLinks />
+
+        <PageLinks parentClasss='nav-links' itemClass='nav-link' />
 
         <ul className="nav-icons">
            {

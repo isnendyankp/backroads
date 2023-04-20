@@ -1,12 +1,12 @@
 import { pageLinks } from '../data'
 
-const PageLinks = () => {
+const PageLinks = ({ parentClass, itemClass }) => {
   return (
-    <ul className="nav-links" id="nav-links">
+    <ul className={parentClass} id="nav-links">
           {pageLinks.map((link) => {
               return (
                 <li key={link.id}>
-                  <a href={link.href} className='nav-link'>
+                  <a href={link.href} className={itemClass}>
                     {link.text}
                   </a>
                 </li>
